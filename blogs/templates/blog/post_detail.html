@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Post/Detail</title>
+</head>
+<body>
+    <h1>{{ posts.title }}</h1>
+    <p>{{ posts.body }}</p>
+    <p>Published on: {{ posts.created }}</p>
+    <a href="{% url 'blogs:post_list' %}"><button>Back</button></a>
+
+</body>
+</html>

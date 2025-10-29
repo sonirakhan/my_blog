@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Post_list</title>
+</head>
+<body>
+    {% for post in page_obj %}
+    <a href="{% url 'blogs:post_detail' post.slug %}"><h1>{{ post.title }}</h1></a>
+
+        <p>{{ post.body|truncatewords:30 }}</p>
+    {% endfor %}
+
+    {% include 'blog/pagination.html' %}
+
+</body>
+</html>
